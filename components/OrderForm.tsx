@@ -41,10 +41,10 @@ export default function OrderForm() {
       setIsSuccess(true);
 
       // Redirect to WhatsApp
-      const businessNumber = process.env.NEXT_PUBLIC_BUSINESS_WHATSAPP_NUMBER || '2348000000000';
+      const businessNumber = process.env.NEXT_PUBLIC_BUSINESS_WHATSAPP_NUMBER || '2348103796277';
       const message = `Hello, I want to claim my ₦13,000 discount for the Luxury Sports Watch.\n\n*Order Details:*\nName: ${formData.fullName}\nPhone: ${formData.phone}\nEmail: ${formData.email || 'N/A'}\nAddress: ${formData.address}\n\nPlease confirm my order.`;
       const whatsappUrl = `https://wa.me/${businessNumber}?text=${encodeURIComponent(message)}`;
-      
+
       // Delay slightly to show success message before redirecting
       setTimeout(() => {
         window.location.href = whatsappUrl;
@@ -75,7 +75,7 @@ export default function OrderForm() {
           {error}
         </div>
       )}
-      
+
       <div>
         <label htmlFor="fullName" className="mb-1 block text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">
           Full Name <span className="text-red-500">*</span>
@@ -153,7 +153,7 @@ export default function OrderForm() {
           'CLAIM MY ₦13,000 DISCOUNT'
         )}
       </button>
-      
+
       <p className="mt-2 text-center text-xs text-gray-500 dark:text-gray-400">
         🔒 Safe & Secure Checkout. Pay on Delivery available in select locations.
       </p>
