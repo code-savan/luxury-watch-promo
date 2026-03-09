@@ -13,11 +13,11 @@ export default function OrderForm() {
     phone: '',
     email: '',
     address: '',
-  });
+});
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+};
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -55,7 +55,7 @@ export default function OrderForm() {
     } finally {
       setIsSubmitting(false);
     }
-  };
+};
 
   if (isSuccess) {
     return (
@@ -66,10 +66,12 @@ export default function OrderForm() {
         </p>
       </div>
     );
-  }
+}
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 rounded-xl border border-gray-200 bg-white p-6 shadow-lg dark:border-zinc-800 dark:bg-zinc-900">
+    <form
+    onSubmit={handleSubmit}
+    className="space-y-4 rounded-xl border border-gray-200 bg-white p-6 shadow-lg dark:border-zinc-800 dark:bg-zinc-900">
       {error && (
         <div className="rounded-md bg-red-50 p-3 text-sm text-red-600 dark:bg-red-900/20 dark:text-red-400">
           {error}
@@ -154,9 +156,10 @@ export default function OrderForm() {
         )}
       </button>
 
-      <p className="mt-2 text-center text-xs text-gray-500 dark:text-gray-400">
+      <p
+        className="mt-2 text-center text-xs text-gray-500 dark:text-gray-400">
         🔒 Safe & Secure Checkout. Pay on Delivery available in select locations.
       </p>
     </form>
-  );
+);
 }
