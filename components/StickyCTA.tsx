@@ -20,9 +20,9 @@ export default function StickyCTA() {
   }, []);
 
   const scrollToForm = () => {
-    const formSection = document.getElementById('checkout-form');
-    if (formSection) {
-      formSection.scrollIntoView({ behavior: 'smooth' });
+    const formElement = document.querySelector('form#checkout-form');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
@@ -32,7 +32,7 @@ export default function StickyCTA() {
         onClick={scrollToForm}
         className="w-full rounded-lg bg-red-600 py-3 sm:py-4 text-center text-base sm:text-lg font-bold uppercase tracking-wider text-white shadow-lg hover:bg-red-700 active:scale-95 transition-all"
       >
-        CLAIM MY ₦13,000 DISCOUNT
+        Order now to claim discount
       </button>
     </div>
   );

@@ -69,9 +69,7 @@ export default function OrderForm() {
 }
 
   return (
-    <form
-    onSubmit={handleSubmit}
-    className="space-y-4 rounded-xl border border-gray-200 bg-white p-6 shadow-lg dark:border-zinc-800 dark:bg-zinc-900">
+    <form id="checkout-form" onSubmit={handleSubmit} className="space-y-4 rounded-xl border border-gray-200 bg-white p-6 shadow-lg dark:border-zinc-800 dark:bg-zinc-900">
       {error && (
         <div className="rounded-md bg-red-50 p-3 text-sm text-red-600 dark:bg-red-900/20 dark:text-red-400">
           {error}

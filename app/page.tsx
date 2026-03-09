@@ -11,9 +11,9 @@ import StickyCTA from '@/components/StickyCTA';
 
 export default function LandingPage() {
   const scrollToForm = () => {
-    const formSection = document.getElementById('checkout-form');
-    if (formSection) {
-      formSection.scrollIntoView({ behavior: 'smooth' });
+    const formElement = document.querySelector('form#checkout-form');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
@@ -43,10 +43,10 @@ export default function LandingPage() {
               <p className="mx-auto mt-6 max-w-2xl text-base text-gray-600 dark:text-gray-400 sm:text-lg lg:mx-0">
                 When a Man Walks Into a Room… People Notice His Watch. Your watch silently communicates success, confidence, and taste.
               </p>
-              
+
               <div className="mt-8 flex flex-col items-center justify-center space-y-4 lg:items-start">
                 <div className="flex items-end space-x-4">
-                  <span className="text-3xl font-black text-red-600 dark:text-red-500 sm:text-4xl">₦85,000</span>
+                  <span className="text-3xl font-black text-red-600 dark:text-red-500 sm:text-4xl font-bold">₦85,000</span>
                   <span className="text-lg text-gray-400 line-through dark:text-gray-500 sm:text-xl">₦98,000</span>
                 </div>
                 <p className="font-bold text-green-600 dark:text-green-400">You Save ₦13,000 Instantly</p>
@@ -61,7 +61,7 @@ export default function LandingPage() {
                   onClick={scrollToForm}
                   className="group flex w-full items-center justify-center rounded-lg bg-black px-6 py-3 text-base font-bold uppercase tracking-wide text-white transition-all hover:bg-gray-900 hover:shadow-xl active:scale-95 dark:bg-white dark:text-black dark:hover:bg-gray-100 sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
                 >
-                  CLAIM MY ₦13,000 DISCOUNT
+                  Order now to claim discount
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </button>
                 <p className="mt-3 text-sm text-gray-500">Only 17 units remaining today.</p>
@@ -215,13 +215,13 @@ export default function LandingPage() {
                   </li>
                 ))}
               </ul>
-              
+
               <div className="mt-10">
                 <button
                   onClick={scrollToForm}
                   className="w-full rounded-lg bg-red-600 py-3 text-center text-base font-bold uppercase tracking-wider text-white shadow-lg transition-all hover:bg-red-700 active:scale-95 sm:w-auto sm:px-8 sm:py-4 sm:text-lg"
                 >
-                  CLAIM MY ₦13,000 DISCOUNT
+                  Order now to claim discount
                 </button>
               </div>
             </div>
@@ -350,17 +350,17 @@ export default function LandingPage() {
             ⏳ FLASH PROMO HAPPENING RIGHT NOW
           </h2>
           <p className="mt-4 text-lg font-medium text-red-600 dark:text-red-500 sm:text-xl">LIMITED TIME DISCOUNT</p>
-          
+
           <div className="mx-auto mt-8 max-w-md rounded-2xl border-2 border-red-100 bg-white p-6 shadow-2xl dark:border-red-900/30 dark:bg-zinc-900 sm:p-8">
             <p className="text-base font-bold text-gray-500 line-through sm:text-xl">Normal Price: ₦98,000</p>
             <p className="mt-2 text-4xl font-black text-black dark:text-white sm:text-5xl">Today Only:</p>
             <p className="mt-4 text-5xl font-black text-red-600 dark:text-red-500 sm:text-6xl">🔥 ₦85,000</p>
             <p className="mt-4 text-sm font-bold text-green-600 dark:text-green-400 sm:text-base">You Save ₦13,000 Instantly</p>
-            
+
             <div className="mt-6 border-t border-gray-100 pt-6 dark:border-zinc-800 sm:mt-8 sm:pt-8">
               <CountdownTimer label="FLASH PROMO ENDS IN" />
             </div>
-            
+
             <p className="mt-4 text-xs text-gray-500 sm:mt-6 sm:text-sm">Once the timer ends, the price returns to ₦98,000.</p>
           </div>
         </div>
@@ -380,7 +380,7 @@ export default function LandingPage() {
               <p className="mt-4 text-lg font-medium text-red-100 sm:text-xl">
                 Due to the ₦13,000 promo discount, orders are coming in quickly. We currently have very limited units remaining.
               </p>
-              
+
               <div className="mt-8 rounded-xl bg-white p-6 text-center text-black shadow-xl">
                 <p className="text-base font-bold uppercase text-red-600 sm:text-lg">⚠ Stock Remaining Today</p>
                 <p className="mt-2 font-display text-5xl font-black sm:text-6xl">17</p>
@@ -495,7 +495,7 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-      
+
       {/* Spacer for mobile sticky CTA */}
       <div className="h-24 sm:h-0"></div>
     </div>
