@@ -47,7 +47,7 @@ export async function POST(req: Request) {
             Phone: phone,
             Email: email || 'N/A',
             Address: address,
-            Product: 'Luxury Sports Watch',
+            Product: 'Richard Millie Ferrari',
             Price: '₦85,000',
           }),
         });
