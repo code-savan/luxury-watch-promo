@@ -13,9 +13,10 @@ export default function OrderForm() {
     phone: '',
     email: '',
     address: '',
+    color: 'Rose Gold',
 });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
 };
 
@@ -42,7 +43,7 @@ export default function OrderForm() {
 
       // Redirect to WhatsApp
       const businessNumber = process.env.NEXT_PUBLIC_BUSINESS_WHATSAPP_NUMBER || '2348103796277';
-      const message = `Hello, I want to claim my ₦13,000 discount for the Richard Millie Ferrari.\n\n*Order Details:*\nName: ${formData.fullName}\nPhone: ${formData.phone}\nAddress: ${formData.address}\n\nPlease confirm my order.`;
+      const message = `Hello, I want to claim my ₦13,000 discount for the Richard Millie Ferrari (${formData.color}).\n\n*Order Details:*\nName: ${formData.fullName}\nPhone: ${formData.phone}\nAddress: ${formData.address}\n\nPlease confirm my order.`;
       const whatsappUrl = `https://wa.me/${businessNumber}?text=${encodeURIComponent(message)}`;
 
       // Delay slightly to show success message before redirecting
@@ -121,6 +122,25 @@ export default function OrderForm() {
           className="w-full rounded-lg border border-gray-300 px-3 py-2 sm:px-4 sm:py-3 focus:border-black focus:outline-none focus:ring-1 focus:ring-black dark:border-zinc-700 dark:bg-zinc-800 dark:text-white dark:focus:border-white dark:focus:ring-white"
           placeholder="e.g. emeka@example.com"
         />
+      </div>
+
+      <div>
+        <label htmlFor="color" className="mb-1 block text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">
+          Watch Color <span className="text-red-500">*</span>
+        </label>
+        <select
+          id="color"
+          name="color"
+          required
+          value={formData.color}
+          onChange={handleChange}
+          className="w-full rounded-lg border border-gray-300 px-3 py-2 sm:px-4 sm:py-3 focus:border-black focus:outline-none focus:ring-1 focus:ring-black dark:border-zinc-700 dark:bg-zinc-800 dark:text-white dark:focus:border-white dark:focus:ring-white"
+        >
+          <option value="Rose Gold">Rose Gold</option>
+          <option value="Silver">Silver</option>
+          <option value="Black">Black</option>
+          <option value="Blue">Blue</option>
+        </select>
       </div>
 
       <div>
