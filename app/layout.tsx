@@ -13,8 +13,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Luxury Sports Watch | Flash Promo',
-  description: 'The Watch That Instantly Upgrades Your Presence. Claim your ₦13,000 discount today.',
+  title: 'Richard Millie Ferrari | Flash Promo',
+  description: 'The Ultimate Luxury Watch. Claim your ₦13,000 discount today.',
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {

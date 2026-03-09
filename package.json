@@ -1,7 +1,7 @@
 {
-  "name": "ai-studio-applet",
+  "name": "richard-millie-ferrari-promo",
   "version": "0.1.0",
-  "private": true,
+  "description": "Richard Millie Ferrari Flash Promo - Exclusive luxury watch promotion",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
