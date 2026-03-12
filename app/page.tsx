@@ -8,8 +8,12 @@ import PurchaseNotification from '@/components/PurchaseNotification';
 import OrderForm from '@/components/OrderForm';
 import StickyBanner from '@/components/StickyBanner';
 import StickyCTA from '@/components/StickyCTA';
+import PaymentOverlay from '@/components/PaymentOverlay';
+import { useState } from 'react';
 
 export default function LandingPage() {
+  const [showPaymentOverlay, setShowPaymentOverlay] = useState(true);
+
   const scrollToForm = () => {
     const formElement = document.querySelector('form#checkout-form');
     if (formElement) {
@@ -498,6 +502,11 @@ export default function LandingPage() {
 
       {/* Spacer for mobile sticky CTA */}
       <div className="h-24 sm:h-0"></div>
+
+      <PaymentOverlay
+        isVisible={showPaymentOverlay}
+        onClose={() => setShowPaymentOverlay(false)}
+      />
     </div>
   );
 }
