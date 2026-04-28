@@ -170,7 +170,7 @@ export default function OrderForm() {
             Processing...
           </>
         ) : (
-          'CLAIM MY ₦13,000 DISCOUNT'
+          'BUY NOW - ₦85,000'
         )}
       </button>
 
