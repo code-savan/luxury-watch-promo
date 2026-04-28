@@ -43,7 +43,7 @@ export default function OrderForm() {
 
       // Redirect to WhatsApp
       const businessNumber = process.env.NEXT_PUBLIC_BUSINESS_WHATSAPP_NUMBER || '2348103796277';
-      const message = `Hello, I want to claim my ₦13,000 discount for the Richard Millie Ferrari (${formData.color}).\n\n*Order Details:*\nName: ${formData.fullName}\nPhone: ${formData.phone}\nAddress: ${formData.address}\n\nPlease confirm my order.`;
+      const message = `Hello, I am interested in buying a Richard Millie Ferrari (${formData.color}) at the promo price of ₦85,000.\n\n*Order Details:*\nName: ${formData.fullName}\nPhone: ${formData.phone}\nAddress: ${formData.address}\n\nPlease confirm my order.`;
       const whatsappUrl = `https://wa.me/${businessNumber}?text=${encodeURIComponent(message)}`;
 
       // Delay slightly to show success message before redirecting
